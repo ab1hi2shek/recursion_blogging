@@ -1,0 +1,17 @@
+<%= @forum.title %><br>
+
+<%if @prev_forum!=nil %>
+	<p align = "left"><%= link_to  'Previous', @prev_forum %><p>
+<% end %>
+<%if @next_forum!=nil %>
+	<p align="right"><%= link_to  'Next', @next_forum %></p><br>
+<% end %>
+
+<%= @forum.content.html_safe %><br>
+
+<br> <br>
+
+<%= link_to "Edit Forum", edit_forum_path(@forum) %>
+<%= link_to "Delete Forum", forum_path(@forum), method: :delete, data: { confirm: "Are you sure?" } %>
+
+<%= link_to "All Forums", forums_path %>

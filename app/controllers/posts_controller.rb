@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 	before_action :find_post, only: [:show, :edit, :update, :destroy]
-
+	skip_before_action :authenticate_user!, :only => [:index]
+	
 	def index
 		if params[:search]
     		@posts = Post.search(params[:search]).order("created_at DESC").paginate(page: params[:page], per_page: 4)

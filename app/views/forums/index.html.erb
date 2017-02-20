@@ -14,19 +14,19 @@
  
 <% end %>
 
-<%= form_tag(posts_path, :method => "get", id: "search-form") do %>
-<%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+<%= form_tag(forums_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Forums" %>
 <%= submit_tag "Search" %>
 <% end %>
 
 
-<p align="right"> <%= link_to "New Articles", new_post_path %> </p>
+<p align="right"> <%= link_to "New Forum", new_forum_path %> </p>
 
-<% @posts.each do |post| %>
-			<h3><a href="#"><%= link_to post.title, post %></a></h3>
-			<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+<% @forums.each do |forum| %>
+			<h3><a href="#"><%= link_to forum.title, forum %></a></h3>
+			<p class="date"><%= forum.created_at.strftime("%A, %b %d") %></p>
 <% end %>
 
-<%= will_paginate @posts %>
+<%= will_paginate @forums %>
 
 

@@ -11,6 +11,8 @@ gem 'sqlite3'
 gem 'friendly_id', '~> 5.1'
 gem 'will_paginate', '~> 3.1.0'
 gem "ckeditor"
+gem 'devise'
+gem 'toastr-rails'
 gem "paperclip"
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
