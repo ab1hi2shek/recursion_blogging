@@ -13,6 +13,11 @@ gem 'will_paginate', '~> 3.1.0'
 gem "ckeditor"
 gem 'devise'
 gem 'toastr-rails'
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
+	
+gem 'cancancan'
+
 gem "paperclip"
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'

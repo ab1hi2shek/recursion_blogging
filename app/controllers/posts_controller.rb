@@ -31,6 +31,7 @@ class PostsController < ApplicationController
 	end
 
 	def edit
+		authorize! :edit, @post, :message => "You cannot edit this article."
 	end
 
 	def update

@@ -19,8 +19,9 @@
 <%= submit_tag "Search" %>
 <% end %>
 
-
-<p align="right"> <%= link_to "New Articles", new_post_path %> </p>
+<% if can? :manage, Post %>
+<p align="right"> <%= link_to "New Post", new_post_path %> </p>
+<% end %>
 
 <% @posts.each do |post| %>
 			<h3><a href="#"><%= link_to post.title, post %></a></h3>

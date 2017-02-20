@@ -11,7 +11,8 @@
 
 <br> <br>
 
+<% if @user.id==@forum.id %>
 <%= link_to "Edit Forum", edit_forum_path(@forum) %>
-<%= link_to "Delete Forum", forum_path(@forum), method: :delete, data: { confirm: "Are you sure?" } %>
+<%= link_to "Delete Forum", forum_path(@forum), method: :delete, data: { confirm: "Are you sure?" } %><% end %>
 
 <%= link_to "All Forums", forums_path %>
