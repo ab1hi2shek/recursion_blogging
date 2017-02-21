@@ -11,6 +11,7 @@ class PostsController < ApplicationController
 	end
 
 	def new
+		authorize! :new, @post, :message => "You cannot create a new article."
 		@post = Post.new
 	end
 

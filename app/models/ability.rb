@@ -17,7 +17,7 @@ class Ability
 
         if user.user_role?
             can :read, Post
-            can :update, Forum
+            can :manage, Forum, user_id: user.id
         end
         # if user.supervisor_role || user.user_role?
         #     can :manage, Post 
